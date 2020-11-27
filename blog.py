@@ -50,7 +50,7 @@ def post_delete(id):
         db.session.commit()
         return redirect('/posts')
     except:
-            return "Свержение не удалось, брат"
+            return "You loose"
 
 
 @app.route('/posts/<int:id>/update', methods = ["POST", "GET"])
@@ -65,7 +65,7 @@ def post_update(id):
             db.session.commit()
             return redirect('/posts')
         except:
-            return "Что-то пошло не по плану, братишка"
+            return "Try again mazafaca"
     else:
         return render_template("post_update.html", article=article)
 
@@ -84,7 +84,7 @@ def create_article():
             db.session.commit()
             return redirect('/posts')
         except:
-            return "Что-то пошло не по плану, брат"
+            return "Are you dump"
     else:
         return render_template("create-article.html")
 
